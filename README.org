@@ -12,12 +12,6 @@
 
 This repository contains R code to perform TreeWAS analysis and infer genetic risk profiles across UK Biobank phenotype data sets. For a full description of the method see preprint [[https://www.biorxiv.org/content/early/2018/07/23/374207][here]].
 
-* Introduction
-
-
-* Method
-
-
 * Demo
 
 #+NAME: demo
