@@ -1,0 +1,81 @@
+#+TITLE: TreeWAS - Genetic risk profiles
+#+AUTHOR: Adrian Cortes
+#+email: adrcort@gmail.com
+
+#+INFOJS_OPT: 
+
+#+BABEL: :session *R* :cache yes :results output graphics :exports both :tangle yes 
+
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+-----
+
+This repository contains R code to perform TreeWAS analysis and infer genetic risk profiles across UK Biobank hospital episode statistics data set. For a full description of the method see preprint [[https://www.biorxiv.org/content/early/2018/07/23/374207][here]].
+
+* Introduction
+
+
+* Method
+
+
+* Demo
+
+#+NAME: demo
+#+BEGIN_SRC R
+
+  library(TreeWASDir)
+
+  HES.data <- load.HES.lk.data()
+  pars <- load.pars()
+
+  data <- HES.data$d
+  res <- HES.data$res
+
+  snp <- "rs4420638"
+  SNP.IDX <- which(res$SNP %in% snp)
+
+  ## Calculate the evidence that the SNP is
+  ## associated with at least one term in the
+  ## ontology
+  lBF <- calc.lBF(
+      pars       = pars,
+      data.sub   = data[SNP.IDX,,]
+  )
+  cat("The Tree BF is ",round(lBF,2), "\n")
+
+  ## Calculate the risk profile across the
+  ## ontology
+  pp <- marginal.posterior.profile(
+      pars       = pars,
+      data.sub   = data[SNP.IDX,,]
+  )
+
+  ## visualise the results. Return a plotly
+  treePlot <- drawTree(
+      tree           = pars$tree,
+      pp             = pp,
+      tree_title     = res[SNP.IDX,"SNP"],
+      trim_tree_pp   = 0.25
+  )
+
+#+END_SRC
+
+
+* Install
+
+#+NAME: install repository
+#+BEGIN_SRC R
+
+  library(devtools)
+
+  install_github("mcveanlab/TreeWAS/TreeWAS")
+
+#+END_SRC
+
+
+* Citation
+
+If you use TreeWAS in your work, please cite us:
+
+Cortes A., et al. (2018) Systematic classification of shared components of genetic risk for common human diseases. bioRxiv 374207. doi: https://doi.org/10.1101/374207
+

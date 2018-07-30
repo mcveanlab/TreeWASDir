@@ -1,0 +1,13 @@
+## exposed functions
+export( calc.lBF )
+export( marginal.posterior.profile )
+export( calc.llk.tree )
+export( load.HES.lk.data )
+export( load.pars )
+export( drawTree )
+
+# packages used
+import( data.table )
+import( plotly )
+import( magrittr )
+import( Rgraphviz )
