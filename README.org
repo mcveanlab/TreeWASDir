@@ -68,7 +68,7 @@ This repository contains R code to perform TreeWAS analysis and infer genetic ri
 
   library(devtools)
 
-  install_github("mcveanlab/TreeWAS/TreeWAS")
+  install_github("mcveanlab/TreeWASDir")
 
 #+END_SRC
 
