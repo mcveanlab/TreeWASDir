@@ -1,5 +1,4 @@
 Package: TreeWASDir
-
 Type: Package
 Title: Functions for TreeWAS on -/0/+ states
 Version: 0.1.0
