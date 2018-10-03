@@ -4,9 +4,8 @@ Title: Functions for TreeWAS on -/0/+ states
 Version: 0.1.0
 Author: "Adrian Cortes <adrcort@gmail.com> [aut, cre]"
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: TreeWAS functions to infer risk profiles across tree-structure health care data. See preprint https://www.biorxiv.org/content/early/2018/07/23/374207.
+Description: TreeWAS functions to infer risk profiles across tree-structure health care data. See preprit https://www.biorxiv.org/content/early/2018/07/23/374207.
 License: MIT
 Encoding: UTF-8
 LazyData: true
-Imports: data.table, plotly, magrittr
-RoxygenNote: 6.1.0
+Imports: data.table, plotly, magrittr, Rgraphviz
