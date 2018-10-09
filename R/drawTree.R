@@ -14,8 +14,6 @@ drawTree <- function(
     trim_tree_pp    = NULL
 ) {
 
-    require(Rgraphviz)
-
     if ( ! is.null( trim_tree_pp ) ) {
         tmp <- trim_tree( tree = tree, pp = pp, pp.thr = trim_tree_pp )
         tree <- tmp$tree
