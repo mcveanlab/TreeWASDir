@@ -10,7 +10,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 -----
 
-This repository contains R code to perform TreeWAS analysis and infer genetic risk profiles across UK Biobank phenotype data sets. For a full description of the method see preprint [[https://www.biorxiv.org/content/early/2018/07/23/374207][here]].
+This repository contains R code to perform TreeWAS analysis and infer genetic risk profiles across UK Biobank phenotype data sets. For a description of the method see preprint [[https://www.biorxiv.org/content/early/2018/07/23/374207][here]].
 
 * Demo
 
@@ -65,11 +65,4 @@ This repository contains R code to perform TreeWAS analysis and infer genetic ri
   install_github("mcveanlab/TreeWASDir")
 
 #+END_SRC
-
-
-* Citation
-
-If you use TreeWAS in your work, please cite us:
-
-Cortes A., et al. (2018) Systematic classification of shared components of genetic risk for common human diseases. bioRxiv 374207. doi: https://doi.org/10.1101/374207
 

@@ -1,5 +1,10 @@
 #' Function to draw TreeWAS results
 #'
+#' requires packages:
+#'    plotly
+#'    Rgraphviz
+#'    graph
+#'
 #' @param tree Disease ontology
 #' @param pp Posterior probabilities table
 #' @param tree_title Title for plot
